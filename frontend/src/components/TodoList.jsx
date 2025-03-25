@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import TodoItem from "./TodoItem";
 
-const API_URL = "http://localhost:5000/todos";
+const API_URL = import.meta.env.VITE_BASE_URI;
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
